@@ -19,7 +19,7 @@ This is an exercise that simulates a supermarket software. Data was consumed fro
 * After completing the order, the shopping cart is emptied; 
 
 ## Link Surge
-[www.mini-market.com.br](hesitant-trousers.surge.sh)
+https://hesitant-trousers.surge.sh/
 
 ## Images
 ![First image](./print1.png)
