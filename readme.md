@@ -2,7 +2,7 @@
 
 # Mini Market
 
-This is an exercise that simulates a supermarket software. Data was consumed from an API Rest developed by me. The link of the github repository is: https://github.com/francinehahn/mini-market-backend
+This is an exercise that simulates a supermarket software and it was designed for the desktop version only. Data was consumed from an API Rest developed by me. The link of the github repository is: https://github.com/francinehahn/mini-market-backend
 
 ## Technologies
 * React.js
