@@ -2,12 +2,11 @@
 
 # Mini Market
 
-This is an exercise to practice some of the following technologies:
+This is an exercise that simulates a supermarket software. Data was consumed from an API Rest developed by me. The link of the github repository is: https://github.com/francinehahn/mini-market-backend
+
+## Technologies
 * React.js
 * Styled-components
-* API consumption
-
-Data was consumed from an API Rest developed by me. The link of the github repository is: https://github.com/francinehahn/mini-market-backend
 
 ## Functionalities
 * To register a new client or select one of the registered clients;
@@ -20,7 +19,7 @@ Data was consumed from an API Rest developed by me. The link of the github repos
 * After completing the order, the shopping cart is emptied; 
 
 ## Link Surge
-
+hesitant-trousers.surge.sh
 
 ## Images
 ![First image](./print1.png)
