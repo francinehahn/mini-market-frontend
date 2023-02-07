@@ -19,7 +19,7 @@ This is an exercise that simulates a supermarket software and it was designed fo
 * After completing the order, the shopping cart is emptied; 
 
 ## Link Surge
-https://faulty-current.surge.sh/
+feeble-eggnog.surge.sh
 
 ## Images
 ![First image](./print1.png)

@@ -79,11 +79,11 @@ export function Form (props) {
     const handleOrder = (e) => {
         e.preventDefault()
         setIsLoadingOrder(true)
-
+    
         if (form.deliveryDate === "") {
             alert("Selecione a data de entrega.")
             setIsLoadingOrder(false)
-            
+
         } else {
             const findClientId = clientData.filter(item => item.name === localStorage.getItem("name"))[0]
             
@@ -93,8 +93,8 @@ export function Form (props) {
             }
 
             const body = {
-                "fk_client_id": findClientId.id,
-                "delivery_date": form.deliveryDate,
+                "clientId": findClientId.id,
+                "deliveryDate": form.deliveryDate,
                 "products": products
             }
 
@@ -102,7 +102,10 @@ export function Form (props) {
                 localStorage.removeItem("products")
                 localStorage.removeItem("name")
                 navigate("/pedido-finalizado")
-            }).catch(err => alert(err.response))
+            }).catch(err => {
+                alert(err.response.data)
+                setIsLoadingOrder(false)
+            })
         }
     }
     
