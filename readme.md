@@ -1,7 +1,6 @@
 ![Cover](./mini-market-logo.png)
 
 # Mini Market
-
 This is an exercise that simulates a supermarket software and it was designed for the desktop version only. Data was consumed from an API Rest developed by me. The link of the github repository is: https://github.com/francinehahn/mini-market-backend
 
 ## Technologies
@@ -22,7 +21,7 @@ This is an exercise that simulates a supermarket software and it was designed fo
 * After completing the order, the shopping cart is emptied; 
 
 ## Deploy
-
+https://mini-market-frontend.vercel.app/
 
 ## Images
 ![First image](./print1.png)
