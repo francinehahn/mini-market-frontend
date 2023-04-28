@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Form } from "../../components/Form/Form"
 import { Header } from "../../components/Header/Header"
-import { ProductsInCart } from "../../components/productsInCart/productsInCart"
+import { ProductsInCart } from "../../components/ProductsInCart/ProductsInCart"
 
 
 export function Home () {

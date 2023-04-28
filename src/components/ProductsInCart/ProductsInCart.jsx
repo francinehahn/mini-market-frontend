@@ -2,11 +2,12 @@ import React from "react"
 import { ProductCard } from "../ProductCard/ProductCard"
 import { useRequestData } from "../../hooks/useRequestData"
 import { Container } from "./style"
+import { base_url } from "../../constants/constants"
 
 
 export function ProductsInCart (props) {
     let productsInCart = JSON.parse(localStorage.getItem("products"))
-    const [stockData] = useRequestData('https://mini-market.onrender.com/products/stock')
+    const [stockData] = useRequestData(`${base_url}products/stock`)
 
     //Function that increases or decreases the units of the product in the cart
     const handleChangeQty = (name, type) => {

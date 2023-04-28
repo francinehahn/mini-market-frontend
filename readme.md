@@ -11,7 +11,6 @@ This is an exercise that simulates a supermarket software and it was designed fo
 * Axios
 * React.js
 
-
 ## Functionalities
 * To register a new client or select one of the registered clients;
 * To add the product to cart and select the units;
@@ -22,8 +21,8 @@ This is an exercise that simulates a supermarket software and it was designed fo
 * To complete an order;
 * After completing the order, the shopping cart is emptied; 
 
-## Link Surge
-https://feeble-eggnog.surge.sh/
+## Deploy
+
 
 ## Images
 ![First image](./print1.png)

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Container } from "./style"
-import { validateName } from "../../constants/constants"
+import { base_url, validateName } from "../../constants/constants"
 import { useNavigate } from "react-router-dom"
 import { useRequestData } from "../../hooks/useRequestData"
 import { useForm } from "../../hooks/useForm"
@@ -16,12 +16,11 @@ export function Form (props) {
 
     const [form, onChange, clearInputs] = useForm({clientName: "", product: "", qty: 1, deliveryDate: ""})
 
-    const [clientData, isLoadingClient, errorClient] = useRequestData('https://mini-market.onrender.com/clients')
-    const [productData, isLoadingProduct, errorProduct] = useRequestData('https://mini-market.onrender.com/products')
-    const [stockData] = useRequestData('https://mini-market.onrender.com/products/stock')
+    const [clientData, isLoadingClient, errorClient] = useRequestData(`${base_url}clients`)
+    const [productData, isLoadingProduct, errorProduct] = useRequestData(`${base_url}products`)
+    const [stockData] = useRequestData(`${base_url}products/stock`)
 
     const selectClient = clientData && form.clientName && clientData.find(data => data.name === form.clientName)
-
 
     //Function that submits OR registers the client name
     const handleSubmitName = (e) => {
@@ -34,8 +33,8 @@ export function Form (props) {
 
             if (!selectClient) {
                 const body = {name: form.clientName}
-                axios.post('https://mini-market.onrender.com/clients', body)
-                .then(alert('Cliente cadastrado com sucesso'))
+                axios.post(`${base_url}clients`, body)
+                .then(() => alert('Cliente cadastrado com sucesso'))
                 .catch(error => alert(error.response))
             }
         } else {
@@ -93,12 +92,12 @@ export function Form (props) {
             }
 
             const body = {
-                "clientId": findClientId.id,
-                "deliveryDate": form.deliveryDate,
-                "products": products
+                clientId: findClientId.id,
+                deliveryDate: form.deliveryDate,
+                products: products
             }
 
-            axios.post('https://mini-market.onrender.com/orders', body).then(() => {
+            axios.post(`${base_url}orders`, body).then(() => {
                 localStorage.removeItem("products")
                 localStorage.removeItem("name")
                 navigate("/pedido-finalizado")
