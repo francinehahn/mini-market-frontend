@@ -82,6 +82,7 @@ export function Form (props) {
         if (form.deliveryDate === "") {
             alert("Selecione a data de entrega.")
             setIsLoadingOrder(false)
+            return
 
         } else {
             const findClientId = clientData.filter(item => item.name === localStorage.getItem("name"))[0]
